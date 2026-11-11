@@ -1,0 +1,112 @@
+[gd_scene format=4 uid="uid://u7m4bc6gvkkl"]
+
+[ext_resource type="Texture2D" uid="uid://d0ygj30kqk80p" path="res://assets/tile/terrain/floor_autotile.png" id="1_i5765"]
+[ext_resource type="PackedScene" uid="uid://or8ssgxbi0k4" path="res://cenas/entidades/Player.tscn" id="2_4txvv"]
+[ext_resource type="PackedScene" uid="uid://x1fij78hnhd5" path="res://cenas/entidades/Inimigo.tscn" id="3_4txvv"]
+[ext_resource type="PackedScene" uid="uid://co2lwygce38kl" path="res://cenas/interface/Hud.tscn" id="4_n344g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n344g"]
+texture = ExtResource("1_i5765")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:0/0/terrains_peering_bit/right_side = 0
+0:0/0/terrains_peering_bit/bottom_right_corner = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_right_corner = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0/terrains_peering_bit/bottom_left_corner = 0
+1:0/0/terrains_peering_bit/left_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/bottom_left_corner = 0
+2:0/0/terrains_peering_bit/left_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0/terrains_peering_bit/right_side = 0
+0:1/0/terrains_peering_bit/bottom_right_corner = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+0:1/0/terrains_peering_bit/top_right_corner = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_right_corner = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+1:1/0/terrains_peering_bit/top_left_corner = 0
+1:1/0/terrains_peering_bit/top_side = 0
+1:1/0/terrains_peering_bit/top_right_corner = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/bottom_left_corner = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_left_corner = 0
+2:1/0/terrains_peering_bit/top_side = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0/terrains_peering_bit/right_side = 0
+0:2/0/terrains_peering_bit/top_side = 0
+0:2/0/terrains_peering_bit/top_right_corner = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+1:2/0/terrains_peering_bit/top_side = 0
+1:2/0/terrains_peering_bit/top_right_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSet" id="TileSet_j610o"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_n344g")
+
+[node name="Level" type="Node2D" unique_id=321069178]
+
+[node name="Chao" type="TileMapLayer" parent="." unique_id=1023127427]
+tile_map_data = PackedByteArray("AAAAAAUAAAABAAAAAAABAAYAAAABAAEAAAACAAcAAAABAAIAAAABAAUAAAABAAAAAAACAAUAAAABAAAAAAADAAYAAAABAAEAAAADAAUAAAABAAAAAAACAAYAAAABAAEAAAAAAAYAAAABAAEAAAAGAAcAAAABAAIAAAAGAAYAAAABAAEAAAAGAAUAAAABAAAAAAAFAAcAAAABAAIAAAAFAAYAAAABAAEAAAAFAAUAAAABAAAAAAAEAAcAAAABAAIAAAAEAAYAAAABAAEAAAAEAAUAAAABAAAAAAADAAcAAAABAAIAAAABAAcAAAABAAIAAAAAAAcAAAABAAIAAAASAAcAAAABAAIAAAASAAYAAAABAAEAAAASAAUAAAABAAAAAAARAAcAAAABAAIAAAARAAYAAAABAAEAAAARAAUAAAABAAAAAAAQAAcAAAABAAIAAAAQAAYAAAABAAEAAAAQAAUAAAABAAAAAAAPAAcAAAABAAIAAAAPAAYAAAABAAEAAAAPAAUAAAABAAAAAAAOAAcAAAABAAIAAAAOAAYAAAABAAEAAAAOAAUAAAABAAAAAAANAAcAAAABAAIAAAANAAYAAAABAAEAAAANAAUAAAABAAAAAAAMAAcAAAABAAIAAAAMAAYAAAABAAEAAAAMAAUAAAABAAAAAAALAAcAAAABAAIAAAALAAYAAAABAAEAAAALAAUAAAABAAAAAAAKAAcAAAABAAIAAAAKAAYAAAABAAEAAAAKAAUAAAABAAAAAAAJAAcAAAABAAIAAAAJAAYAAAABAAEAAAAJAAUAAAABAAAAAAAIAAcAAAABAAIAAAAIAAYAAAABAAEAAAAIAAUAAAABAAAAAAAHAAcAAAABAAIAAAAHAAYAAAABAAEAAAAHAAUAAAABAAAAAAAXAAcAAAACAAIAAAAXAAYAAAACAAEAAAAXAAUAAAACAAAAAAAWAAcAAAABAAIAAAAWAAYAAAABAAEAAAAWAAUAAAABAAAAAAAVAAcAAAABAAIAAAAVAAYAAAABAAEAAAAVAAUAAAABAAAAAAAUAAcAAAABAAIAAAAUAAYAAAABAAEAAAAUAAUAAAABAAAAAAATAAcAAAABAAIAAAATAAYAAAABAAEAAAATAAUAAAABAAAAAAD//wcAAAABAAIAAAD//wYAAAABAAEAAAD//wUAAAABAAEAAAD//wQAAAACAAEAAAD//wMAAAACAAEAAAD//wIAAAACAAEAAAD//wEAAAACAAEAAAD//wAAAAACAAEAAAD+/wcAAAABAAIAAAD+/wYAAAABAAEAAAD+/wUAAAABAAEAAAD+/wQAAAABAAEAAAD+/wMAAAABAAEAAAD+/wIAAAABAAEAAAD+/wEAAAABAAEAAAD+/wAAAAABAAEAAAD9/wcAAAAAAAIAAAD9/wYAAAAAAAEAAAD9/wUAAAAAAAEAAAD9/wQAAAAAAAEAAAD9/wMAAAAAAAEAAAD9/wIAAAAAAAEAAAD9/wEAAAAAAAEAAAD9/wAAAAAAAAEAAAD+////AAABAAAAAAD/////AAACAAAAAAD9////AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_j610o")
+
+[node name="Player" parent="." unique_id=387663335 instance=ExtResource("2_4txvv")]
+position = Vector2(44, 130)
+vida_maxima = 100
+
+[node name="Inimigo" parent="." unique_id=1764594551 instance=ExtResource("3_4txvv")]
+position = Vector2(578, 149)
+
+[node name="HUD" parent="." unique_id=1901344236 instance=ExtResource("4_n344g")]
+
+[connection signal="morreu" from="Player" to="HUD" method="mostrar_game_over"]
+[connection signal="vida_alterada" from="Player" to="HUD" method="atualizar_vida"]

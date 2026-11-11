@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://co2lwygce38kl"]
+
+[ext_resource type="Texture2D" uid="uid://bukxxeesqhydr" path="res://assets/interface/stats/bar/health_bar_background.png" id="1_0hwie"]
+[ext_resource type="Script" uid="uid://4c7kd6dpcosk" path="res://scripts/interface/hud.gd" id="1_6m4d7"]
+[ext_resource type="Texture2D" uid="uid://dcerly5h1wacv" path="res://assets/interface/stats/bar/health_bar.png" id="2_6m4d7"]
+[ext_resource type="FontFile" uid="uid://dutmok43hcdrq" path="res://assets/font/thaleah_fat.ttf" id="3_ukxvx"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1901344236]
+script = ExtResource("1_6m4d7")
+
+[node name="BarraVida" type="TextureRect" parent="." unique_id=1945945701]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 210.0
+offset_bottom = 34.0
+
+[node name="Preenchimento" type="TextureProgressBar" parent="BarraVida" unique_id=782946083]
+layout_mode = 0
+offset_right = 200.0
+offset_bottom = 24.0
+value = 100.0
+texture_under = ExtResource("1_0hwie")
+texture_progress = ExtResource("2_6m4d7")
+texture_progress_offset = Vector2(17, 7)
+
+[node name="GameOver" type="Control" parent="." unique_id=158146186]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Escurecer" type="ColorRect" parent="GameOver" unique_id=160712171]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Centro" type="VBoxContainer" parent="GameOver" unique_id=1259037104]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Texto" type="Label" parent="GameOver/Centro" unique_id=899698786]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ukxvx")
+theme_override_font_sizes/font_size = 36
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="Ajuda" type="Label" parent="GameOver/Centro" unique_id=1123251718]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ukxvx")
+theme_override_font_sizes/font_size = 18
+text = "Voltando para o começo..."
+horizontal_alignment = 1

@@ -1,0 +1,39 @@
+extends CanvasLayer
+##
+## ===== HUD =====
+## Mostra a barra de vida e a tela de GAME OVER.
+## O HUD não controla o jogo: ele só ESCUTA os sinais do jogador.
+##
+
+@onready var barra: TextureProgressBar = $BarraVida/Preenchimento
+@onready var game_over: Control = $GameOver
+
+var jogador = null
+
+
+func _ready() -> void:
+	jogador = get_tree().get_first_node_in_group("jogador")
+
+	barra.max_value = jogador.vida_maxima
+	barra.value = jogador.vida
+
+	# escuta os avisos do jogador
+	jogador.vida_alterada.connect(atualizar_vida)
+	jogador.morreu.connect(mostrar_game_over)
+
+	game_over.visible = false
+
+
+# ===== PASSO 2: atualizar a barra =====
+func atualizar_vida(vida_atual: int, _vida_maxima: int) -> void:
+	barra.value = vida_atual
+
+
+# ===== PASSO 3: game over e recomeço =====
+func mostrar_game_over() -> void:
+	await get_tree().create_timer(1.2).timeout   # deixa a morte aparecer
+	game_over.visible = true
+
+	await get_tree().create_timer(2.0).timeout   # tempo para ler
+	get_tree().reload_current_scene()            # volta para o começo
+
